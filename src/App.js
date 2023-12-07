@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import logo from '../src/images/auto-logo-without-bg.png';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="header">
+                <div className="img-div">
+                    <img className="img" src={logo} alt="logo" />
+                </div>
+                <h1 className="h1">Netrukus atsidarome!</h1>
+            </div>
+            <div className="divas">
+                <p>
+                    Mūsų komanda siūlo aukščiausios kokybės <br /> automobilių
+                    detalizavimo paslaugas
+                </p>
+            </div>
+        </div>
+    );
 }
 
 export default App;

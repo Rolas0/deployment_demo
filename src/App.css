@@ -1,38 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .App {
-  text-align: center;
+    background-image: url('./images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    margin-top: 20px;
+    position: relative;
+
+    width: 510px;
+    height: 500px;
+    z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    box-shadow: 2px 2px 10px red;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.img-div {
+    position: relative;
+    z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img {
+    max-width: 100%;
+    height: auto;
+    z-index: 3;
+    margin: 0px;
+    padding: 0px;
+}
+
+.h1 {
+    top: 350px;
+    left: 659px;
+    z-index: 4;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    top: 75%;
+    left: 500px;
+    color: rgb(255, 255, 255);
+    z-index: 5;
+    margin: 0;
+}
+
+@media (max-width: 1100px) {
+}
+
+@media (max-width: 768px) {
+    .App {
+        gap: 10px;
+    }
+    .header {
+        width: 90%;
+        height: 410px;
+    }
+    .h1 {
+        font-size: 38px;
+    }
+
+    .divas {
+        position: relative;
+        z-index: 1;
+        padding: 5px;
+    }
+
+    .divas::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        box-shadow: 2px 2px 10px red;
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    p {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width: 280px) {
+    .header {
+        width: 90%;
+        height: 310px;
+    }
+    .h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+        color: rgb(233, 225, 225);
+    }
 }
